@@ -1,0 +1,21 @@
+﻿<Window x:Name="wndPuz" x:Class="puzle_esdeveniments.wndPuzle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Puzle" Height="300" Width="300" Loaded="wndPuz_Loaded" KeyDown="MovTecles">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Viewbox >
+            <UniformGrid MouseUp="Moviment"  x:Name="ugdGraella"   />
+        </Viewbox>
+        <DockPanel Grid.Row="1" >
+            <TextBlock Margin="5" Text="Moviments: "></TextBlock>
+            <TextBlock x:Name="txbMoviments"  Margin="10,5,0,0"  Text="0" />
+            
+        </DockPanel>
+    </Grid>
+
+
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="puzle_esdeveniments.MainWindow"
+        Title="Joc Quadres" Height="262" Width="248">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="104*" MinWidth="100"/>
+            <ColumnDefinition Width="103*" MinWidth="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*" />
+            <RowDefinition Height="106*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <xctk:IntegerUpDown x:Name="iudColumnes" HorizontalAlignment="Left"  Margin="10,10,10,0" VerticalAlignment="Top" Height="20" Width="41" Minimum="2" Maximum="50" DisplayDefaultValueOnEmptyText="True" DefaultValue="2"/>
+            <xctk:IntegerUpDown x:Name="iudFiles" HorizontalAlignment="Left"   Margin="10,20,10,0" VerticalAlignment="Top" Height="20" Width="41" Minimum="2" Maximum="50" DisplayDefaultValueOnEmptyText="True" DefaultValue="2"/>
+        </StackPanel>
+        <StackPanel  Grid.Row="1">
+            <TextBlock HorizontalAlignment="Right" Margin="10" Text="Columnes" />
+            <TextBlock HorizontalAlignment="Right" Margin="10,15,10,10" Text="Files" />
+        </StackPanel>
+        <Button x:Name="btnObrir" Content="Començar" Margin="10" Grid.Column="1"  Grid.Row="2" VerticalAlignment="Top" Click="btnObrir_Click_1"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,10" Text="Puzzle Quadres" FontSize="14" MinWidth="100"/>
+
+    </Grid>
+</Window>
